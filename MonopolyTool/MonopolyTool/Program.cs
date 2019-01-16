@@ -18,7 +18,7 @@ namespace MonopolyTool
 
             StreamReader sr = new StreamReader((@"Rent.txt"));
             int length = int.Parse(sr.ReadLine());
-
+            
             for (int i = 0; i < length; i++)
             {
                 Console.WriteLine(NamesHouse[i]);
