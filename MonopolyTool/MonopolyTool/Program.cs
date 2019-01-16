@@ -16,15 +16,45 @@ namespace MonopolyTool
 
             string NamesHouses;
 
-            StreamReader sr = new StreamReader((@"Rent.txt"));
-            NamesHouses = sr.ReadLine();
             
-            for (int i = 0; i < 22; i++)
-            {
-                Console.WriteLine(NamesHouse[i]);
-            }
+            
+            
 
-            
+
+            StreamReader sr = new StreamReader("Rent.txt");
+
+
+            int i;
+            int[] marks = new int[22];
+
+            for (i = 0; i < marks.Length; i++)
+            {
+
+                {
+                    marks[i] = int.Parse(sr.ReadLine());
+                }
+
+                {
+                    Console.WriteLine(marks[i]);
+
+                }
+            }
+            sr.Close();
+
+            string[,] array = new string[,]
+              {
+
+            {"1010", "109", "108", "107", "106", "105", "104", "103", "102", "101", "100"},
+            {"100", "90", "80", "70", "60", "50", "40", "30", "20", "10", "00" },
+            {"00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "010"},
+            {"010", "110", "210", "310", "410", "510", "610", "710", "810", "910", "1010"},
+
+               };
+
+
+
+
+
             sr.Close();
 
             Console.ReadKey();
