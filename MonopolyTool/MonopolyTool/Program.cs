@@ -11,35 +11,40 @@ namespace MonopolyTool
         static void Main(string[] args)
         {
 
-            string[] NamesHouse = { "Mediterranean Avenue", "Baltic Avenue", "Oriental Avenue", "Vermont Avenue", "Connectict Avenue", "St. Charles Place", "States Avenue", "Virginia Avenue", "St. James Place", "Tennessee Avenue", "New York Avenue", "Kentucky Avenue", "Indiana Avenue", "Illinois Avenue", "Atlantic Avenue", "Ventnor Avenue", "Marvin Gardens", "North Carolina", "Pacific Avenue", "Pennsylvania Avenue", "Park Place", "BoardWalk" };
-            string[] RentHouse = { "2", "4" };
-
-            string NamesHouses;
-
-            
-            
-            
+            StreamReader sr = new StreamReader("HouseName.txt");
+            StreamReader RS = new StreamReader("Rent.txt");
 
 
-            StreamReader sr = new StreamReader("Rent.txt");
+            string[] House = new string[22];
 
-
-            int i;
-            int[] marks = new int[22];
-
-            for (i = 0; i < marks.Length; i++)
+            for (int i = 0; i < House.Length; i++)
             {
 
                 {
-                    marks[i] = int.Parse(sr.ReadLine());
+                    House[i] = sr.ReadLine();
                 }
 
                 {
-                    Console.WriteLine(marks[i]);
+                    Console.WriteLine(House[i]);
 
                 }
             }
-            sr.Close();
+   
+            string[] Rent = new string[22];
+
+            for (int i = 0; i < Rent.Length; i++)
+            {
+
+                {
+                    Rent[i] = RS.ReadLine();
+                }
+
+                {
+                    Console.WriteLine(Rent[i]);
+
+                }
+            }
+            RS.Close();
 
             string[,] array = new string[,]
               {
@@ -52,10 +57,6 @@ namespace MonopolyTool
                };
 
 
-
-
-
-            sr.Close();
 
             Console.ReadKey();
         }
