@@ -23,7 +23,7 @@ namespace MonopolyTool
             {
                 Console.WriteLine(NamesHouse[i]);
             }
-
+            
             sr.Close();
 
             Console.ReadKey();
